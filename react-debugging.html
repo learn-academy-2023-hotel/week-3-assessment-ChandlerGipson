@@ -63,14 +63,18 @@
           padding: "10px"
         }
         // No need to change anything ABOVE this line ^
-
+        //added jsx opening tag and clsoing tag to line 68 and 85
+        // added drawcard into the first onClick {} because drawCard is the viariable
+        // added shuffle into the second onClick {} because shuffle = setHand
+        // the second onClick need to be camelcased
+        // 
         return (
+            <> 
           <h1>Draw a Card</h1>
-          <button onClick={}>
+          <button onClick={drawCard}> 
             Click to Draw a Card
           </button>
-          <button onclick={shuffle}>
-            Return Cards and Shuffle Deck
+          <button onClick={shuffle}> 
           </button>
           <div style={handStyles}>
             {hand.map((card, index) => {
@@ -81,9 +85,10 @@
               )
             })}
           </div>
+           </> // added vsx closing tag
         )
       }
-
+//pseudo: i added "hand" inside the {} for button click. added some empty divs at the top and buttom of the component because they were missing. it was also missing the prethesisnfor the top and the bottom. 
       // No need to change anything below this line
 
       const domContainer = document.querySelector('#react-container')
